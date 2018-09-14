@@ -3,7 +3,7 @@
 #include <iostream>
 #include <time.h>		// Used for srand for number generation
 #include <array>		// Used for array allocation and use
-#include <algorithm>	// Used for sort() function
+#include <algorithm>		// Used for sort() function
 #include <limits>		// Used for Pause function
 
 using namespace std;
@@ -76,22 +76,23 @@ void fill_Array(array<int, 100>& numbers)
 int main()
 {
 
-	srand(time(NULL));				// Seed rand to clock time
+	srand(time(NULL));			// Seed rand to clock time
 
 	array<int, 100> numbers;		// Allocate an array
 
 	fill_Array(numbers);			// Fill array with random numbers
 	
-	Compare_1(numbers);				// Output Min/Max
+	Compare_1(numbers);			// Output Min/Max
 	cout << endl;
 
-	Compare_2(numbers);				// Output Min/Max
+	Compare_2(numbers);			// Output Min/Max
 
 	cout << endl;
 
 //-----------------------------------------------------------------------------
 	// Alternative for system("pause")
-
+	// Requires #include <limits>
+	
 	cin.clear();
 	cin.sync();
 
